@@ -16,5 +16,32 @@ int main()
     cout << "\nMin = " << B[3];
     return 0;
 }
-
-//Write definition of stat() here 
+void stat(const double x[],int y,double z[]){
+	double sum=0,sum2=0;
+	double max=x[0],min=x[0];
+	for(int i=0;i<y;i++){
+		sum+=x[i];
+		sum2+=(x[i]*x[i]);
+		if(x[i]>=max){
+			max=x[i];
+		}
+		if(x[i]<=min){
+			min=x[i];
+			
+		}
+		
+		
+	}
+	
+	z[0]=sum/y;
+	z[1]=sqrt((sum2/y)-z[0]*z[0]);
+	z[2]=max;
+	z[3]=min;
+	
+	
+		
+	
+	
+	
+	
+}
